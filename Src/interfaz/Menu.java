@@ -46,13 +46,13 @@ public class Menu {
                         modificarRemera();
                         break;
                     case 5:
-                        System.out.println("👋 Saliendo del programa...");
+                        System.out.println(" Saliendo del programa...");
                         break;
                     default:
-                        System.out.println("❌ Opción no válida. Por favor, intente de nuevo.");
+                        System.out.println(" Opción no válida. Por favor, intente de nuevo.");
                 }
             } catch (CatalogoException e) {
-                System.out.println("❌ Error: " + e.getMessage());
+                System.out.println(" Error: " + e.getMessage());
             }
 
         } while (opcion != 5);
@@ -71,7 +71,7 @@ public class Menu {
         scanner.nextLine(); // Limpiar el buffer
 
         catalogo.addRemera(new Remera(id, equipo, talle, precio));
-        System.out.println("✅ Remera agregada con éxito.");
+        System.out.println(" Remera agregada con éxito.");
     }
 
     private void eliminarRemera() throws CatalogoException {
@@ -80,9 +80,9 @@ public class Menu {
         scanner.nextLine(); // Limpiar el buffer
 
         if (catalogo.eliminarRemera(id)) {
-            System.out.println("✅ Remera eliminada con éxito.");
+            System.out.println(" Remera eliminada con éxito.");
         } else {
-            System.out.println("❌ Remera no encontrada.");
+            System.out.println(" Remera no encontrada.");
         }
     }
 
@@ -100,9 +100,9 @@ public class Menu {
 
         if (catalogo.eliminarRemera(id)) {
             catalogo.addRemera(new Remera(id, nuevoEquipo, nuevoTalle, nuevoPrecio));
-            System.out.println("✅ Remera modificada con éxito.");
+            System.out.println(" Remera modificada con éxito.");
         } else {
-            System.out.println("❌ Remera no encontrada.");
+            System.out.println(" Remera no encontrada.");
         }
     }
 }
